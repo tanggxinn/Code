@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+input {
+  outline-color: none;
+  border: none;
+}
+
+/*整体初始化*/
