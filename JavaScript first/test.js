@@ -67,7 +67,7 @@ var Cb = {
 };
 var Cc = {
   name: 'Cc',
-  children: [],
+  children: [15],
   text: ['white']
 };
 var Cd = {
@@ -83,6 +83,7 @@ var C = {
 var arr = [A, B, C];
 
 //遍历数组
+/*无函数的办法
 var i, p = 0;
 for (i = 0; i < arr.length; i++) {
   if (arr[i].text.indexOf('blue')) {
@@ -90,11 +91,71 @@ for (i = 0; i < arr.length; i++) {
   }
   if (arr[i].children) {
     for (p = 0; p < arr[i].children.length; p++) {
-      /* var u=arr[i].children[p].text.indexOf('blue');
-      console.log(u); */
       if (arr[i].children[p].text.indexOf('blue')>=0) {
         console.log(arr[i].children[p].name);
       }
     }
   }
+}*/
+
+// function search(te) {
+//   if (te.text.indexOf('blue')>=0) {
+//     console.log(te.name);
+//   }else{
+//     console.log('null');
+//   }
+// }
+
+// function findarray(fa) {
+//   var dx1 = [];
+//   if (fa.children) {
+//     dx1 = fa.children;
+//   }
+//   return dx1;
+
+// }
+// var u=0,i=0,p=0, dx = arr, dx1 = [];
+
+//   for (i = 0; i < dx.length; i++) {
+//     console.log(dx.length)
+//     var x = findarray(dx[i])
+//     if ( x.length>0){
+//      y= dx.concat(x);
+//      console.log(x);
+//      dx = y;
+//      y=[];
+//     }
+//   }
+
+// for (p=0;p<dx.length;p++){
+//   search(dx[p]);
+// }
+
+function is(keywords, shx) {
+  return shx.indexOf(keywords) >= 0;
 }
+
+function find(array) {
+  array.forEach((item) => {
+    if (item.text && is(searchkw, item.text)) {
+      console.log(item.name)
+    }
+    if (item.children) {
+      find(item.children);
+    }
+  })
+}
+
+searchkw='red';
+find(arr);
+
+
+
+
+
+
+
+
+
+
+
