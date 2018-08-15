@@ -8,6 +8,5 @@ arr.join('，');
 
 var arr2 = arr.pop();
 
-
-
 console.log('欢迎' + arr + '和' + arr2 + '同学！');
+console.log(arr.slice(0, 3).join('\n'));
