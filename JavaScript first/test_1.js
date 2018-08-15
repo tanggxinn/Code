@@ -148,14 +148,3 @@ function find(array) {
 
 searchkw='red';
 find(arr);
-
-
-
-
-
-
-
-
-
-
-
