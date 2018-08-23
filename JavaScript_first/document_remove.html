@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HTML结构 -->
+  <ul id="test-list">
+    <li>JavaScript</li>
+    <li>Swift</li>
+    <li>HTML</li>
+    <li>ANSI C</li>
+    <li>CSS</li>
+    <li>DirectX</li>
+  </ul>
+  <!-- JS结构 -->
+  <!-- 把与Web开发技术不相关的节点删掉 -->
+  <script>
+    'use strict';
+    var list = [],
+      i, c, re, web, arr = [];
+    list = document.getElementById('test-list');
+    for (i = 0; i < list.children.length; i++) {
+      web = list.children[i].innerText;
+      if ((web !== 'JavaScript') && (web !== 'HTML') && (web !== 'CSS')) {
+        list.children[i].id = 'list' + i;
+        arr.push(list.children[i].id);
+      }
+    }
+    for (c = 0; c < arr.length; c++) {
+      re = document.getElementById(arr[c]);
+      list.removeChild(re);
+    }
+
+    // 测试:
+    ;
+    (function () {
+      var
+        arr, i,
+        t = document.getElementById('test-list');
+      if (t && t.children && t.children.length === 3) {
+        arr = [];
+        for (i = 0; i < t.children.length; i++) {
+          arr.push(t.children[i].innerText);
+        }
+        if (arr.toString() === ['JavaScript', 'HTML', 'CSS'].toString()) {
+          console.log('测试通过!');
+        } else {
+          console.log('测试失败: ' + arr.toString());
+        }
+      } else {
+        console.log('测试失败!');
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

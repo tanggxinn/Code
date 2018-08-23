@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HTML结构 -->
+  <ol id="test-list">
+    <li class="lang">Scheme</li>
+    <li class="lang">JavaScript</li>
+    <li class="lang">Python</li>
+    <li class="lang">Ruby</li>
+    <li class="lang">Haskell</li>
+  </ol>
+  <!--- JS结构 --->
+  <!-- 按字符串顺序重新排序DOM节点 -->
+  <script>
+    'use strict';
+
+    var i, c, arr = [];
+    var list=document.getElementsByClassName('lang');
+    // console.log(list.children);
+    for (i = 0; i < list.length; i++) {
+      list[i].id = list[i].innerText;
+      // console.log(list.children[i].id);
+      arr.push(list[i].id);
+    };
+    arr.sort();
+    // console.log(arr);
+    for (c = 0; c < list.length; c++) {
+      // console.log(arr[c]);
+      var s = document.getElementById(arr[c]);
+      // console.log(s);
+      list[0].parentElement.appendChild(s);
+    }
+    // console.log(list.children[0].innerHTML);
+
+    // 测试:
+    ;
+    (function () {
+      var
+        arr, i,
+        t = document.getElementById('test-list');
+      if (t && t.children && t.children.length === 5) {
+        arr = [];
+        for (i = 0; i < t.children.length; i++) {
+          arr.push(t.children[i].innerText);
+        }
+        if (arr.toString() === ['Haskell', 'JavaScript', 'Python', 'Ruby', 'Scheme'].toString()) {
+          console.log('测试通过!');
+        } else {
+          console.log('测试失败: ' + arr.toString());
+        }
+      } else {
+        console.log('测试失败!');
+      }
+    })();
+  </script>
+</body>
+
+</html>
