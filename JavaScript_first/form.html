@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- HTML结构 -->
+  <form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+    <p id="test-error" style="color:red"></p>
+    <p>
+      用户名:
+      <input type="text" id="username" name="username">
+    </p>
+    <p>
+      口令:
+      <input type="password" id="password" name="password">
+    </p>
+    <p>
+      重复口令:
+      <input type="password" id="password-2">
+    </p>
+    <p>
+      <button type="submit">提交</button>
+      <button type="reset">重置</button>
+    </p>
+  </form>
+  <!-- JS结构 -->
+  <!-- 利用JavaScript检查用户注册信息是否正确，在以下情况不满足时报错并阻止提交表单：
+  1.用户名必须是3-10位英文字母或数字；
+  2.口令必须是6-20位；
+  3.两次输入口令必须一致。 -->
+  <script>
+    'use strict';
+    var checkRegisterForm = function () {
+      let error = document.getElementById('test-error');
+      let username = document.getElementById('username');
+      let password = document.getElementById('password');
+      let password2 = document.getElementById('password-2');
+      let checkname = /^[0-9a-zA-Z]{3,10}$/;
+      let checkpass = /^[0-9a-zA-Z\_\.]{6,20}$/;
+      let tename = checkname.test(username.value);
+      let tepass = checkpass.test(password.value);
+      let tepapa = (password.value === password2.value);
+      // console.log((username.value === '') || (password.value === '') || (password2.value === ''));
+      if ((username.value === '') || (password.value === '') || (password2.value === '')) {
+        error.innerText = '重要信息未填写';
+        return false;
+      }
+      if (!tename) {
+        error.innerText = '用户名必须是3-10位英文字母或数字';
+        return false;
+      }
+      if (!tepass) {
+        error.innerText = '口令必须是6-20位';
+        return false;
+      }
+      if (!tepapa) {
+        error.innerText = '两次输入口令必须一致';
+        return false;
+      }
+      console.log('用户名：'+username.value+'\n'+
+    '密码：'+password.value);
+      return true;
+
+    }
+
+    // 测试:
+    ;
+    (function () {
+      window.testFormHandler = checkRegisterForm;
+      var form = document.getElementById('test-register');
+      if (form.dispatchEvent) {
+        var event = new Event('submit', {
+          bubbles: true,
+          cancelable: true
+        });
+        form.dispatchEvent(event);
+      } else {
+        form.fireEvent('onsubmit');
+      }
+    })();
+  </script>
+</body>
+
+</html>
