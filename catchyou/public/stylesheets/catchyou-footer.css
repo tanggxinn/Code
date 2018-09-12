@@ -1,0 +1,111 @@
+footer {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+}
+
+footer a {
+  display: block;
+}
+
+footer,
+.title,
+.something {
+  color: #999999;
+}
+
+footer .title {
+  font-weight: bold;
+  font-size: 0.95em;
+  margin: 0;
+}
+
+footer .something,
+p {
+  font-size: 0.85em;
+  line-height: 1.7;
+}
+
+footer .about,
+.table,
+.jobs {
+  padding-right: 50px;
+}
+
+.about {
+  width: 300px;
+}
+
+.about img {
+  width: 80px;
+}
+
+.about .about-top {
+  padding-bottom: 10px;
+}
+
+.about .about-top .something {
+  padding: 5px 0 10px 0;
+}
+
+.about .about-top .link {
+  padding: 10px 0;
+}
+
+.about .about-top .link a{
+  display: inline-block;
+}
+
+.about .about-top .link img {
+  width: 25px;
+  margin-right: 10px;
+  opacity: 0.4;
+}
+
+.about .about-bottom {
+  padding: 10px 0;
+}
+
+.table .table-top {
+  display: flex;
+}
+
+.table .table-top .table-top-l .l-l,
+.l-r {
+  display: inline-block;
+  padding: 10px 30px 0 0;
+}
+
+.table .table-top .table-top-r .title{
+  padding-bottom: 10px;
+}
+
+.table .table-bottom {
+  padding-top: 37px;
+}
+
+.jobs a{
+  width: 205px;
+  height: 33px;
+  margin: 10px 0;
+}
+
+.jobs a img{
+  width: 25px;
+  margin: 4px 10px 4px 0;
+  border-radius: 12.5px;
+  overflow:hidden;
+}
+
+.jobs a img,p{
+  display: inline-block;
+}
+
+.jobs a span{
+  line-height: 1.6;
+  display: block;
+}
+
+.jobs a .title {
+  color: #3a8bbb;
+}

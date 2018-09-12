@@ -1,0 +1,120 @@
+.centerbar {
+  background-color: rgba(255,255,255,0.6);
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 30px;
+  text-align: center;
+  /*文字居中*/
+}
+
+.centerbar>.first-ha>li {
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 20px;
+}
+
+.centerbar,
+.centerbar>.first-ha>li {
+  height: 50px;
+}
+
+.centerbar>.first-ha>li>a {
+  line-height: inherit;
+  color: #444444;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.centerbar>.first-ha>li>a>i{
+  line-height: inherit;
+  color: #999999;
+  font-size: 0.8em;
+  margin-left: 6.5px;
+}
+
+.centerbar>.first-ha>li>.second-ha{
+  position: absolute;
+  /*绝对定位，让它不会影响上级菜单的宽度*/
+  width: 180px;
+  margin: -5px 0 0 -15px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  border-radius: 0 0 6px 6px;
+  /*分别定义四个角是否圆角以及圆角弧度*/
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  /*使这个盒子始终处于最上层*/
+  display: none;
+}
+
+.centerbar>.first-ha>li>.second-ha>li {
+  width: 100%;
+}
+
+.centerbar>.first-ha>li>.second-ha>li>a {
+  padding: 5px 15px;
+  font-size: 13px;
+  line-height: 1.25;
+  color: #999999;
+  text-align: left;
+}
+
+.centerbar>.first-ha>li:hover>.second-ha {
+  display: block;
+}
+
+.centerbar>.first-ha>li>.second-ha>li:hover>a {
+  color: #444444;
+  background-color: #eeeeee;
+}
+
+header{
+  position: relative;
+}
+
+header .th-img{
+  position: absolute;
+  right: 21px;
+bottom: 8.5px;
+}
+
+header .th-img a{
+  display: block;
+  padding: 7.5px 9px;
+}
+
+header .th-img a i{
+  color: #999999;
+}
+
+header .th-img .th-ul{
+  position: absolute;
+  margin-left: -152px;
+  color: #cccccc;
+  padding: 10px;
+  font-size: 12px;
+  border-radius:5px 0 5px 5px;
+  display: none;
+}
+
+header .th-img .th-ul ul{
+  display: flex;
+  font-size: 36px;
+}
+
+header .th-img .th-ul ul li{
+  padding: 5px;
+}
+
+header .th-img:hover a,.th-ul{
+  background-color: #333333;
+}
+
+header .th-img:hover>a{
+  border-radius: 5px 5px 0 0;
+}
+
+header .th-img:hover>.th-ul{
+display: block;
+}
+
+/*选择栏*/
