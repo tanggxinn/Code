@@ -3,6 +3,17 @@
 /**
  * Module dependencies.
  */
+/**
+ * require() 是一个全局 node 函数，
+ * 用于将模块导入当前文件。
+ * 这里我们使用相对路径指定 app.js 模块，
+ * 并省略可选的（.js）文件扩展名。
+ */
+/**此文件中的其余代码，
+ * 将设置一个 node 运行的 HTTP 服务器，
+ * 并将应用 app 设置为特定的端口
+ * （在环境变量中定义，如果变量未定义，则定义为3000），
+ * 并开始监听和报告服务器错误和连接。 */
 
 var app = require('../app');
 var debug = require('debug')('catchyou:server');

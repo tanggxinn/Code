@@ -8,107 +8,110 @@
     <%= title %>
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="catchyou.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="catchyou-nav.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="catchyou-head.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="catchyou-main.css" />
-  <link rel="stylesheet" href="catchyou-footer.css" />
+  <link rel="stylesheet" href="./stylesheets/catchyou.css" />
+  <link rel="stylesheet" href="./stylesheets/catchyou-nav.css" />
+  <link rel="stylesheet" href="./stylesheets/catchyou-head.css" />
+  <link rel="stylesheet" href="./stylesheets/catchyou-main.css" />
+  <link rel="stylesheet" href="./stylesheets/catchyou-footer.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
-  <script src="catchyou.js"></script>
+  <script src="./javascripts/catchyou.js"></script>
 </head>
 
 <body>
 
   <nav>
-    <div class="leftbar">
+    <div id="navbar">
+      <div class="leftbar">
 
-      <ul>
-        <li class="first-na">
-          <a class="logo" href="w">
-            <img src="img/catchyou-logo.png" alt="">
-          </a>
-        </li>
+        <ul>
+          <li class="first-na">
+            <a class="logo" href="./userinfo.ejs">
+              <img src="./images/catchyou-logo.png" alt="">
+            </a>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Shots</a>
-          <ul class="second-na">
-            <li>
-              <a href="w">Popular Shots</a>
-            </li>
-            <li>
-              <a href="w">Recent Shots</a>
-            </li>
-            <li class="line"></li>
-            <li>
-              <a href="w">Debuts</a>
-            </li>
-            <li>
-              <a href="w">Playoffs</a>
-            </li>
-          </ul>
-        </li>
+          <li class="first-na">
+            <a href="w">Shots</a>
+            <ul class="second-na">
+              <li>
+                <a href="w">Popular Shots</a>
+              </li>
+              <li>
+                <a href="w">Recent Shots</a>
+              </li>
+              <li class="line"></li>
+              <li>
+                <a href="w">Debuts</a>
+              </li>
+              <li>
+                <a href="w">Playoffs</a>
+              </li>
+            </ul>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Designers</a>
-          <ul class="second-na">
-            <li>
-              <a href="w">Trending Designers</a>
-            </li>
-            <li>
-              <a href="w">Popular Designers</a>
-            </li>
-          </ul>
-        </li>
+          <li class="first-na">
+            <a href="w">Designers</a>
+            <ul class="second-na">
+              <li>
+                <a href="w">Trending Designers</a>
+              </li>
+              <li>
+                <a href="w">Popular Designers</a>
+              </li>
+            </ul>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Teams</a>
-        </li>
+          <li class="first-na">
+            <a href="w">Teams</a>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Community</a>
-        </li>
+          <li class="first-na">
+            <a href="w">Community</a>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Jobs</a>
-        </li>
+          <li class="first-na">
+            <a href="w">Jobs</a>
+          </li>
 
-        <li class="first-na">
-          <a href="w">Hiring</a>
-        </li>
+          <li class="first-na">
+            <a href="w">Hiring</a>
+          </li>
 
-        <li class="first-na">
-          <a href="w">
-            <i class="fas fa-ellipsis-h"></i>
-          </a>
-        </li>
-      </ul>
+          <li class="first-na">
+            <a href="w">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </li>
+        </ul>
 
+      </div>
+
+      <div class="rightbar">
+        <ul>
+          <li class="first-na">
+            <form class="search" action="index.ejs">
+              <i class="fas fa-search"></i>
+              <input type="text" name="search" value="" placeholder="Search">
+            </form>
+          </li>
+
+          <li class="first-na">
+            <a href="w">Sign in</a>
+          </li>
+
+          <li class="first-na">
+            <a href="w">Sign up</a>
+          </li>
+
+          <li class="first-na">
+            <a class="What" href="w">What are you working on?</a>
+          </li>
+        </ul>
+
+      </div>
     </div>
 
-    <div class="rightbar">
-      <ul>
-        <li class="first-na">
-          <form class="search" action="index.ejs">
-            <i class="fas fa-search"></i>
-            <input type="text" name="search" value="" placeholder="Search">
-          </form>
-        </li>
-
-        <li class="first-na">
-          <a href="w">Sign in</a>
-        </li>
-
-        <li class="first-na">
-          <a href="w">Sign up</a>
-        </li>
-
-        <li class="first-na">
-          <a class="What" href="w">What are you working on?</a>
-        </li>
-      </ul>
-
-    </div>
   </nav>
 
   <header>
